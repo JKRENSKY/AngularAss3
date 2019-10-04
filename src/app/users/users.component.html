@@ -1,0 +1,10 @@
+<p>users works!</p>
+<div ng-app>
+<button
+
+  class="btn btn-warning"
+  (click)="toggle()">Display Details</button>
+
+  <ng-container *ngIf="show"><p>Secret Paragraph</p></ng-container>
+  <p *ngFor="let user of users; let i = index" [ngStyle]="{backgroundColor: i>=5 ? 'blue' : 'transparent'}" [ngClass]="{online: i>=5 }">{{ i+1 }}USER</p>
+</div>
